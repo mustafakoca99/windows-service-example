@@ -15,10 +15,10 @@ namespace WindowsServiceExample
 
         public void FileWrite(string message)
         {
-            string filePath = AppDomain.CurrentDomain.BaseDirectory + "/Logs";
-            if (!Directory.Exists(filePath))
+            string folderPath = AppDomain.CurrentDomain.BaseDirectory + "/Logs";
+            if (!Directory.Exists(folderPath))
             {
-                Directory.CreateDirectory(filePath);
+                Directory.CreateDirectory(folderPath);
             }
 
             string textPath = AppDomain.CurrentDomain.BaseDirectory + "Logs/serviceLog.txt";
